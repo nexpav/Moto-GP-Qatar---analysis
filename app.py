@@ -130,6 +130,10 @@ with col8:
     space(13)
     st.divider()
 
+with col11:
+
+    st.markdown("### :racing_motorcycle: Graph showing the best laps or the best of any of the 4 sectors of the race for all riders. The x-axis presents the riders, and the y-axis presents time :racing_motorcycle:")
+
 with col9:
     
     space(15)
@@ -162,7 +166,6 @@ with col9:
         
 with col11:
 
-    st.markdown("### :racing_motorcycle: Graph showing the best laps or the best of any of the 4 sectors of the race for all riders. The x-axis presents the riders, and the y-axis presents time :racing_motorcycle:")
     if is_best_lap_button_clicked==False and is_best_first_sector_button_clicked==False and is_best_second_sector_button_clicked==False and is_best_third_sector_button_clicked==False and is_best_fourth_sector_button_clicked==False:
         figure = plt.figure() 
         figure.set_size_inches(18.5, 10.5)
@@ -222,7 +225,7 @@ with col15:
 
 with col16:
 
-    space(20)
+    space(21)
     image = Image.open(selected_team.image)
     new_image = image.resize((600, 625))
     st.image(new_image)
@@ -260,12 +263,16 @@ with col19:
 
 with col20:
     
-    space(20)
+    space(21)
     selected_motorcycle_image = Image.open(selected_motorcycle.image)
-    selected_motorcycle_image_resize = image.resize((600, 625))
+    selected_motorcycle_image_resize = selected_motorcycle_image.resize((600, 625))
     st.image(selected_motorcycle_image_resize)
     space(8)
     st.divider()
+
+with col23:
+
+    st.markdown("### :racing_motorcycle: Graph showing best laps, best of any of the 4 sectors of the race or maximum average speed for all motorcycles.   On x-axis are presented motorcycles and on y-axis is presented time or maximum average speed :racing_motorcycle:")
 
 with col21:
     
@@ -311,7 +318,7 @@ with col21:
 
 with col23:
 
-    st.markdown("### :racing_motorcycle: Graph showing best laps, best of any of the 4 sectors of the race or maximum average speed for all motorcycles.   On x-axis are presented motorcycles and on y-axis is presented time or maximum average speed :racing_motorcycle:")
+    #st.markdown("### :racing_motorcycle: Graph showing best laps, best of any of the 4 sectors of the race or maximum average speed for all motorcycles.   On x-axis are presented motorcycles and on y-axis is presented time or maximum average speed :racing_motorcycle:")
 
     if is_button6_clicked==False and is_button7_clicked==False and is_button8_clicked==False and is_button9_clicked==False and is_button10_clicked==False and is_button11_clicked==False:
         figure_empty = plt.figure() 
